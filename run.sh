@@ -1,7 +1,8 @@
 #!/bin/sh
 
+#/usr/sbin/logrotate -v -f /logrotate.conf &
+/usr/sbin/crond -f &
 /usr/sbin/nginx -g 'daemon off;' &
-/usr/sbin/logrotate -v -f /logrotate.conf &
 
 pids=`jobs -p`
 
